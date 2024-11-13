@@ -1,0 +1,22 @@
+.breadcrumb{
+    padding: 20px 0px 20px 200px;
+}
+.h1Comp{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.Computers{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.ContainerComp{
+    display: flex;
+    justify-content: start;
+    margin-right: 100px;
+}
+.Filter{
+    margin: 50px 0px 10px 100px ;
+}
