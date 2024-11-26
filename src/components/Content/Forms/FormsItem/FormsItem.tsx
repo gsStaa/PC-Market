@@ -1,20 +1,16 @@
-import styles from './FormsItem.module.css'
-import cn from 'classnames'
+import styles from './styles.module.css'
 import { FC } from 'react'
-// inputStyle: question | feedback | undefined
-
-type TFormsItem = {
-    FormsText: string;
-    FormsInputText:string;
-    inputStyle:string;
-    containerClassName: string;
+// view: question | feedback
+type TForms = {
+  labelText: string
+  text: string
+  view: 'question' | 'feedback'
 }
-
-export const FormsItem: FC<TFormsItem> = ({FormsText, FormsInputText, inputStyle, containerClassName}) => {
-    return(
-        <div className={cn(styles.container, containerClassName)}>
-            <label>{FormsText}</label>
-            <input className={styles[`${inputStyle ?? 'question'}Input`] } placeholder={FormsInputText}></input>
-        </div>
-    )
+export const FormsItem: FC<TForms> = ({ labelText, text, view }) => {
+  return (
+    <div className={styles.container}>
+      <label>{labelText}</label>
+      <input className={styles[`${view}Input`]} placeholder={text}></input>
+    </div>
+  )
 }

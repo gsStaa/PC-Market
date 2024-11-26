@@ -1,11 +1,14 @@
-import styles from './Button.module.css'
+import styles from './styles.module.css'
 import { FC } from 'react'
 
 type TButton = {
-    children: string;
+  text: string
 }
 
-export const Button: FC<TButton> = ({children, ...props}) =>{
-    return (
-    <button {...props} className={styles.button}>{children}</button>)
+export const Button: FC<TButton> = ({ text }) => {
+  return (
+    <button className={styles.button} type='submit'>
+      {text}
+    </button>
+  )
 }

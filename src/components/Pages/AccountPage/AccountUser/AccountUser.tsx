@@ -1,25 +1,16 @@
-import { Link } from "react-router-dom";
-import { useAuth } from "../../../../hooks/use-auth";
-import { removeUser } from "../../../../App/features/user/userSlice";
-import { useAppDispatch } from "../../../../hooks/redux-hooks";
+import { useLogout, useAuth } from '../../../../hooks/use-auth'
 
 export function AccountUser() {
-  const dispatch = useAppDispatch();
-
-  const { isAuth, email } = useAuth();
-
-  return isAuth ? (
+  const { email } = useAuth()
+  const handleLogout = useLogout()
+  return (
     <div>
       <h3>Добро пожаловать!</h3>
       <p>
         Теперь вы можете совершать покупки в нашем магазине, а так же выйти из
-        аккаунта {email}{" "}
+        аккаунта {email}{' '}
       </p>
-      <Link to="/">
-        <button onClick={() => dispatch(removeUser())}>Выйти</button>
-      </Link>
+      <button onClick={handleLogout}>Выйти</button>
     </div>
-  ) : (
-    <Link to="AccountPage"></Link>
-  );
+  )
 }

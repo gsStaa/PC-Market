@@ -1,15 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import { Header } from '../../Header/Header';
-import { Footer } from '../../Footer/Footer';
-import { FC } from 'react';
+import { Outlet } from 'react-router-dom'
+import { Header } from '../../Header/Header'
+import { Footer } from '../../Footer/Footer'
 
-
-export const Layout: FC = () => {
-    return (
-        <>
-            <Header />
-            <Outlet />
-            <Footer bing={''} items={''} />
-        </>
-    )
+export const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  )
 }

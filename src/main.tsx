@@ -4,15 +4,19 @@ import App from './App.js'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import {store} from './App/store.js'
+import { store } from './App/store.js'
 import './firebase.js'
-
+import { AuthProvider } from './hooks/AuthProvider.js'
+import './main.css'
+import { I18nextProvider } from 'react-i18next'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </BrowserRouter>
     </Provider>
   </StrictMode>

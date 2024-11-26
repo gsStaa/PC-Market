@@ -1,0 +1,22 @@
+.ProductsCont {
+  padding: 20px;
+}
+.ProductsName {
+  display: flex;
+  justify-content: center;
+  color: var(--tm-color-white);
+  margin-bottom: 20px;
+}
+.ProductsNameP {
+  display: flex;
+  justify-content: center;
+  color: var(--tm-color-white);
+}
+.Cont {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.productLi {
+  padding: 30px;
+}

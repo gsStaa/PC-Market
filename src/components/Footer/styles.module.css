@@ -1,0 +1,39 @@
+.footerCont {
+  color: var(--tm-color-white);
+  padding-top: 50px;
+  width: 50%;
+  margin: auto;
+}
+.footerContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.hrFooter {
+  margin: auto;
+}
+.logo {
+  width: 200px;
+}
+.containerBottom {
+  display: flex;
+  justify-content: space-between;
+}
+.Ikonka {
+  width: 40px;
+  height: 40px;
+}
+.IkonkaCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--tm-color-grey);
+  margin-right: 20px;
+}
+.IkonkaContainer {
+  display: flex;
+  align-items: center;
+}

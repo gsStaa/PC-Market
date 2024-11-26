@@ -1,11 +1,11 @@
 import Carousel from 'react-bootstrap/Carousel'
-import styles from './SliderItem.module.css'
+import styles from './styles.module.css'
 import { FC } from 'react'
 
 type TSliderItem = {
-  src: string;
-  lable:string;
-  desc:string;
+  src: string
+  lable: string
+  desc: string
 }
 
 export const SliderItem: FC<TSliderItem> = ({ src, lable, desc }) => {

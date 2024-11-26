@@ -1,0 +1,27 @@
+.formContainer {
+  display: grid;
+  justify-content: center;
+}
+.formName {
+  display: flex;
+  justify-content: center;
+  color: var(--tm-color-white);
+  font-weight: 700;
+}
+.formNameSpan {
+  color: var(--tm-color-grey);
+  padding-left: 10px;
+}
+.formQuestion {
+  width: 1000px;
+  height: 450px;
+  background-color: var(--tm-color-card-black);
+  border-radius: 40px;
+  transition: 1s;
+  padding: 30px;
+}
+.formQuestion:hover {
+  border: 1px solid var(--tm-color-lime);
+  box-shadow: 0px 0px 30px var(--tm-color-lime),
+    inset 0px 0px 10px var(--tm-color-lime);
+}
