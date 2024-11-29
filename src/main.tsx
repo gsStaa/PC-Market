@@ -8,7 +8,6 @@ import { store } from './App/store.js'
 import './firebase.js'
 import { AuthProvider } from './hooks/AuthProvider.js'
 import './main.css'
-import { I18nextProvider } from 'react-i18next'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

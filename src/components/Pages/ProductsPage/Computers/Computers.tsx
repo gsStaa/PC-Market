@@ -40,6 +40,8 @@ export const Computers: FC = () => {
               name={item.name}
               specifications={item.specifications}
               ikon={item.ikon}
+              quantity={item.quantity}
+              id={''}
             />
           ))}
         </div>

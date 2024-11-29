@@ -20,10 +20,12 @@ export const Header: FC = () => {
               <Link to='/AccountPage'>ЛИЧНЫЙ КАБИНЕТ</Link>
             </li>
             <li className={style.liHeader}>
-              <img
-                className={style.shoping}
-                src='/Header/free-icon-font-shopping-bag.png'
-              />
+              <Link to='/CartPage'>
+                <img
+                  className={style.shoping}
+                  src='/Header/free-icon-font-shopping-bag.png'
+                />
+              </Link>
             </li>
             <Search />
           </ul>
