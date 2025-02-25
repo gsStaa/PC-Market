@@ -8,7 +8,11 @@ export const Footer: FC = () => {
       <hr className={style.hrFooter} />
       <div className={style.footerContainer}>
         {dataFooter.map((item) => (
-          <FooterItem bing={item.bing} texts={item.items} />
+          <FooterItem
+            bing={item.bing}
+            texts={item.items}
+            address={item.address}
+          />
         ))}
       </div>
       <div className={style.containerBottom}>

@@ -1,19 +1,18 @@
 export const imagesWithData = [
   {
-    src: '/Sliders/pc1.jpeg',
-    lable: 'First slide label',
-    desc: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
+    src: '/Sliders/1.png',
+    label: 'Самые мощные игровые компьютеры',
+    desc: 'Только у нас',
+    text: 'Перейти в компьютеры',
+    address: 'ProductsPage/Computers',
+    view: '',
   },
 
   {
-    src: '/Sliders/pc2.jpg',
-    lable: 'Second slide label',
-    desc: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
-  },
-
-  {
-    src: '/Sliders/pc3.png',
-    lable: 'Third slide label',
-    desc: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
+    src: '/Sliders/2.png',
+    label: 'А еще есть крутые мониторы ',
+    text: 'Перейти в мониторы',
+    address: 'ProductsPage/Accessories/Monitors ',
+    view: 'Two',
   },
 ]

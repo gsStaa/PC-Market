@@ -1,0 +1,15 @@
+.AccessoriesItem {
+  color: var(--tm-color-white);
+  width: 300px;
+  margin: 50px;
+  padding: 20px;
+  background-color: var(--tm-color-card-black);
+  border-radius: 20px;
+  transition: 1s;
+}
+.AccessoriesItem:hover {
+  border: 1px solid var(--tm-color-lime);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px var(--tm-color-lime),
+    inset 0px 0px 10px var(--tm-color-lime);
+}

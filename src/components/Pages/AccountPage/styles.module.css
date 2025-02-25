@@ -1,4 +1,4 @@
-.AccountForm {
+.accountForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,11 @@
   padding-top: 30px;
   gap: 40px;
 }
-.AccountCont {
+.accountCont {
   display: flex;
   justify-content: center;
 }
-.AccountForm:hover {
+.accountForm:hover {
   border: 1px solid var(--tm-color-lime);
   box-shadow: 0px 0px 30px var(--tm-color-lime),
     inset 0px 0px 10px var(--tm-color-lime);

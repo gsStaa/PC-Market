@@ -3,12 +3,14 @@ import { FC } from 'react'
 
 type TButton = {
   text: string
-  onClick: () => void
+  onClick?: () => void
 }
 
-export const Button: FC<TButton> = ({ text, onClick }) => {
+export const Button: FC<
+  TButton & React.ButtonHTMLAttributes<HTMLButtonElement>
+> = ({ text, onClick, ...props }) => {
   return (
-    <button className={styles.button} type='submit' onClick={onClick}>
+    <button className={styles.button} onClick={onClick} {...props}>
       {text}
     </button>
   )

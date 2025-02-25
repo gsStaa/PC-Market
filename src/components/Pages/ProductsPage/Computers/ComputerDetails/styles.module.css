@@ -1,0 +1,27 @@
+.mainCont {
+  display: flex;
+  justify-content: center;
+  color: var(--tm-color-white);
+}
+.infoSrc {
+  padding-right: 100px;
+}
+.infoText {
+  color: var(--tm-color-dark-white);
+  width: 400px;
+}
+.infoPriceButton {
+  display: flex;
+  justify-content: center;
+}
+.infoPrice {
+  font-size: 25px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.infoSpecifications {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 5px;
+}

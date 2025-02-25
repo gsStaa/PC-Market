@@ -1,8 +1,8 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-const i18nForms = i18n.createInstance()
-i18nForms.use(initReactI18next).init({
+const i18nForm = i18n.createInstance()
+i18nForm.use(initReactI18next).init({
   resources: {
     ru: {
       translation: {
@@ -22,4 +22,4 @@ i18nForms.use(initReactI18next).init({
   interpolation: { escapeValue: false },
 })
 
-export default i18nForms
+export default i18nForm

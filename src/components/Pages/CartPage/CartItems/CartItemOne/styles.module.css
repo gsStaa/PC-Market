@@ -1,0 +1,25 @@
+.buttonDelete {
+  margin-left: 20px;
+  width: 23px;
+  height: 23px;
+  background-color: #101010;
+  border: none;
+}
+.buttonSum {
+  color: var(--tm-color-white);
+  width: 30px;
+  background-color: var(--tm-color-dark-grey);
+  border: none;
+}
+.quantityTd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.sumItem {
+  background-color: var(--tm-color-card-black);
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
