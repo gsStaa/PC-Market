@@ -27,6 +27,8 @@ export const dataComputers = [
       'Gigabyte H610M S2H',
       '16Гб',
     ],
+    quantity: 3,
+    id: 1,
   },
   {
     src: '/Computers/2.png',
@@ -56,6 +58,8 @@ export const dataComputers = [
       'Gigabyte Z790 UD D5',
       '32Гб',
     ],
+    quantity: 4,
+    id: 2,
   },
   {
     src: '/Computers/3.png',
@@ -85,6 +89,8 @@ export const dataComputers = [
       'ASUS PRIME X670-P',
       '64Гб',
     ],
+    quantity: 4,
+    id: 3,
   },
   {
     src: '/Computers/4.png',
@@ -109,5 +115,7 @@ export const dataComputers = [
       '/Computers/Item/4.png',
     ],
     idSpecifications: ['RTX 4060TI', 'Intel Core i5', '16Гб'],
+    quantity: 4,
+    id: 4,
   },
 ]

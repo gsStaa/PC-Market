@@ -1,3 +1,5 @@
+import { setCart } from '../../../../../App/features/cartSlice/cartSlice'
+import { useAppDispatch } from '../../../../../hooks/redux-hooks'
 import { Button } from '../../../../Modules/Button/Button'
 import { Trans18 } from '../../../../Modules/Translation/Translation'
 import i18nComp from './ru'
@@ -11,7 +13,10 @@ type TComputersItem = {
   name: string[]
   specifications: string[]
   ikon: string[]
+  id: string
+  quantity: number
 }
+
 export const ComputersItem: FC<TComputersItem> = ({
   src,
   label,
@@ -19,7 +24,13 @@ export const ComputersItem: FC<TComputersItem> = ({
   name,
   specifications,
   ikon,
+  id,
+  quantity,
 }) => {
+  const dispatch = useAppDispatch()
+  const handleAddCart = () => {
+    dispatch(setCart({ id, label, price, src, quantity }))
+  }
   return (
     <Trans18 i18n={i18nComp}>
       <div className={style.ComputersItem}>
@@ -28,7 +39,7 @@ export const ComputersItem: FC<TComputersItem> = ({
         <h4>
           {i18nComp.t('1')} {price} {i18nComp.t('2')}
         </h4>
-        <Button text='В корзину' />
+        <Button text='В корзину' onClick={handleAddCart} />
         <hr />
         <Button text='Подробнее' />
         <hr />
