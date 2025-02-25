@@ -4,29 +4,31 @@ import style from './styles.module.css'
 import { ComputersItem } from './ComputersItem/ComputersItem'
 import { FilterComputer } from './FilterComputer/FilterComputer'
 import { dataComputers } from './data'
+import i18nProdPC from 'src/components/Pages/ProductsPage/Computers/ru'
 
 export const Computers: FC = () => {
   const [filterComp, setFilter] = useState(dataComputers)
-
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([])
   const handleFilterComputer = useCallback(
     (nameFil: string, checked: boolean) => {
+      let newFilters
       if (checked) {
-        const newDataComp = dataComputers.filter((e) =>
-          e.idSpecifications.includes(nameFil)
-        )
-        setFilter(newDataComp)
+        newFilters = [...selectedFilters, nameFil]
       } else {
-        setFilter(dataComputers)
+        newFilters = selectedFilters.filter((filter) => filter !== nameFil)
       }
+      setSelectedFilters(newFilters)
+      const newDataComp = dataComputers.filter((e) =>
+        newFilters.some((filter) => e.idSpecifications.includes(filter))
+      )
+      setFilter(newDataComp)
     },
-    [dataComputers]
+    [selectedFilters]
   )
   return (
     <div>
-      <div className={style.breadcrumb}>
-        <Breadcrumb />
-      </div>
-      <h1 className={style.h1Comp}>Игровые компьютеры</h1>
+      <Breadcrumb />
+      <h1 className={style.h1Comp}>{i18nProdPC.t('name')}</h1>
       <div className={style.ContainerComp}>
         <div className={style.Filter}>
           <FilterComputer onFilterComputer={handleFilterComputer} />
@@ -39,9 +41,10 @@ export const Computers: FC = () => {
               price={item.price}
               name={item.name}
               specifications={item.specifications}
-              ikon={item.ikon}
+              icon={item.icon}
               quantity={item.quantity}
-              id={''}
+              id={item.id}
+              address={item.address}
             />
           ))}
         </div>

@@ -1,8 +1,21 @@
-export const dataComputers = [
+export type TComputersItem = {
+  src: string
+  label: string
+  price: number
+  name: string[]
+  specifications: string[]
+  icon: string[]
+  id: number
+  quantity: number
+  address: string
+  category?: string
+}
+
+export let dataComputers = [
   {
     src: '/Computers/1.png',
     label: 'EDELWEISS NITRO',
-    price: 99910,
+    price: 101300,
     name: [
       'Видеокарта:',
       'Процессор:',
@@ -15,7 +28,7 @@ export const dataComputers = [
       'Gigabyte H610M S2H',
       '16Гб DDR4 3000 МГц',
     ],
-    ikon: [
+    icon: [
       '/Computers/Item/1.png',
       '/Computers/Item/2.png',
       '/Computers/Item/3.png',
@@ -29,6 +42,9 @@ export const dataComputers = [
     ],
     quantity: 3,
     id: 1,
+    address: 'EDELWEISS-NITRO',
+    category: 'Computers',
+    text: 'Яркий представитель бюджетной серии игровых ПК. Строгий черный корпус для консервативных пользователе, а вот начинка прогрессивная и задаст жару вашим виртуальным противника.. Системный блок для игр и учебы.',
   },
   {
     src: '/Computers/2.png',
@@ -46,7 +62,7 @@ export const dataComputers = [
       'Gigabyte Z790 UD D5',
       '32 Гб Kingston Hyperx Fury 6000МГц',
     ],
-    ikon: [
+    icon: [
       '/Computers/Item/1.png',
       '/Computers/Item/2.png',
       '/Computers/Item/3.png',
@@ -60,6 +76,9 @@ export const dataComputers = [
     ],
     quantity: 4,
     id: 2,
+    address: 'EDELWEISS-LUCIFER',
+    category: 'Computers',
+    text: 'Высокопроизводительный компьютер EDELWEISS LUCIFER в максимальной комплектации. Топовые комплектующие, новейшая графическая система 4080 16 GB 6 GDDR, водяное охлаждение. Решение удовлетворит предпочтения самых требовательных клиентов и геймеров',
   },
   {
     src: '/Computers/3.png',
@@ -77,7 +96,7 @@ export const dataComputers = [
       'ASUS PRIME X670-P',
       '64Гб DDR5 VULCAN 6000 МГц W',
     ],
-    ikon: [
+    icon: [
       '/Computers/Item/1.png',
       '/Computers/Item/2.png',
       '/Computers/Item/3.png',
@@ -91,6 +110,9 @@ export const dataComputers = [
     ],
     quantity: 4,
     id: 3,
+    address: 'EDELWEISS-RANGER',
+    category: 'Computers',
+    text: 'Если вы хотите купить супер мощный компьютер, в стильном корпусе и настраиваемой RGB подсветкой, топовым FPS, к тому же с очень низким уровнем шума, тогда EDELWEISS RANGER, именно эта модель подойдет под данные запросы идеально.',
   },
   {
     src: '/Computers/4.png',
@@ -108,7 +130,7 @@ export const dataComputers = [
       'ASUS B760M-K PRIME D4',
       '16Гб Kingston HyperX Fury 3000МГц',
     ],
-    ikon: [
+    icon: [
       '/Computers/Item/1.png',
       '/Computers/Item/2.png',
       '/Computers/Item/3.png',
@@ -117,5 +139,8 @@ export const dataComputers = [
     idSpecifications: ['RTX 4060TI', 'Intel Core i5', '16Гб'],
     quantity: 4,
     id: 4,
+    address: 'EDELWEISS-RAPTOR',
+    category: 'Computers',
+    text: 'Стильный, современный мощный ПК для гейминга EDELWEISS RAPTOR. Снабжён производительной видеокартой RTX 4060 Ti  с поддержкой технологии трассировки лучей в реальном времени обеспечивающей реалистичную картинку и прекрасную цветопередачу.',
   },
 ]

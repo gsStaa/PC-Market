@@ -5,13 +5,16 @@ import { useEffect, useMemo } from 'react'
 import { FC } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux-hooks'
 import React from 'react'
-import { Trans18 } from '../Translation/Translation'
 import i18nBread from './ru'
 
 const breadcrumbNames: Record<string, string> = {
   ProductsPage: 'Каталог товаров',
   Computers: 'Игровые ПК',
-  AccountPage: 'Личный кабинет',
+  Accessories: 'Акссесуары',
+  Keyboards: 'Клавиатуры ',
+  Mouse: ' Мышки',
+  Headsets: 'Наушники ',
+  Monitors: 'Мониторы ',
 }
 const BreadcrumbComponent: FC = () => {
   const location = useLocation()
@@ -43,15 +46,13 @@ const BreadcrumbComponent: FC = () => {
   )
 
   return (
-    <Trans18 i18n={i18nBread}>
-      <div className={style.crumbs}>
-        <Link to='/' className={style.crumbs}>
-          {i18nBread.t('name')}
-        </Link>{' '}
-        {' / '}
-        {breadcrumbLinks}
-      </div>
-    </Trans18>
+    <div className={style.crumbs}>
+      <Link to='/' className={style.crumbs}>
+        {i18nBread.t('name')}
+      </Link>
+      {' / '}
+      {breadcrumbLinks}
+    </div>
   )
 }
 

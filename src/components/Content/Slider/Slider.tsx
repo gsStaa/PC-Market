@@ -9,7 +9,14 @@ export const Slider: FC = () => {
     <Carousel className={styles.carouselContainer}>
       {imagesWithData.map((item) => (
         <Carousel.Item interval={4000} className={styles.carouselItemContainer}>
-          <SliderItem src={item.src} lable={item.lable} desc={item.desc} />
+          <SliderItem
+            src={item.src}
+            label={item.label}
+            desc={item.desc}
+            text={item.text}
+            address={item.address}
+            view={item.view}
+          />
         </Carousel.Item>
       ))}
     </Carousel>

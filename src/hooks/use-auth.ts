@@ -10,10 +10,11 @@ import { removeUser, setUser } from '../App/features/user/userSlice'
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export function useAuth() {
+export function useUser() {
   const { email, token, id } = useAppSelector((state) => state.user)
+
   return {
-    isAuth: !!email,
+    isAuth: Boolean(email),
     email,
     token,
     id,
@@ -55,7 +56,7 @@ export const useLogin = () => {
             token: user.refreshToken,
           })
         )
-        navigate('AccountUser')
+        navigate('/AccountUser')
       })
       .catch(() => alert('Не существует такого пользователя!'))
   }

@@ -7,6 +7,6 @@ export const dataProduct = [
   {
     src: '/ProductsPage/2.jpg',
     label: 'Аксессуары',
-    a: 'ProductsPage',
+    a: 'Accessories',
   },
 ]

@@ -1,49 +1,36 @@
 import { FC } from 'react'
 import styles from './styles.module.css'
 import { Button } from '../../../Modules/Button/Button'
-import { useAppDispatch, useAppSelector } from '../../../../hooks/redux-hooks'
-import { removeCart } from '../../../../App/features/cartSlice/cartSlice'
+import { useCartItems } from '../../../../hooks/useCartItems'
+import { CartItemOne } from './CartItemOne/CartItemOne'
+import i18nCart from 'src/components/Pages/CartPage/ru'
 
 export const CartItem: FC = () => {
-  const cartItems = useAppSelector((state) => state.cart.items)
-  const dispatch = useAppDispatch()
+  const { totalPrice, handleBuy, isHave } = useCartItems()
+
   return (
     <div className={styles.cart}>
       <table className={styles.table}>
         <thead>
           <tr>
-            <td colSpan={2}>Товар</td>
-            <td>Наличие</td>
-            <td>Количество</td>
-            <td colSpan={2}>Цена</td>
+            <td className={styles.prod}>{i18nCart.t('product')}</td>
+            <td>{i18nCart.t('presence')}</td>
+            <td>{i18nCart.t('quantity')}</td>
+            <td className={styles.price}>{i18nCart.t('presence')}</td>
           </tr>
         </thead>
         <tbody>
-          {cartItems.map((item) => (
-            <tr>
-              <td className={styles.img}>
-                <img src={item.src} width='120px' />
-              </td>
-              <td>{item.label}</td>
-              <td>{item.quantity}</td>
-              <td>{item.sum}</td>
-              <td>{item.price}</td>
-              <td>
-                <Button
-                  text='del '
-                  onClick={() => dispatch(removeCart(item.id))}
-                />
-              </td>
-            </tr>
-          ))}
+          <CartItemOne />
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={6}>ИТОГО:</td>
+            <td className={styles.Price}>
+              {i18nCart.t('total')} {totalPrice} {i18nCart.t('rub')}
+            </td>
           </tr>
         </tfoot>
       </table>
-      <Button text='Купить' />
+      <Button text={i18nCart.t('buy')} onClick={handleBuy} disabled={isHave} />
     </div>
   )
 }
