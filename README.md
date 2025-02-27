@@ -57,12 +57,12 @@
 
 ### Главная страница
 
-![Главная страница](./screencapture-localhost-5173-2025-02-27-22_20_49.png)
+![Главная страница](./public/screenshots/screencapture-localhost-5173-2025-02-27-22_20_49.png)
 
 ### Каталог товаров
 
-![Каталог товаров](./screencapture-localhost-5173-ProductsPage-Computers-2025-02-27-22_21_48.png)
+![Каталог товаров](./public/screenshots/screencapture-localhost-5173-ProductsPage-Computers-2025-02-27-22_21_48.png)
 
 ### Корзина
 
-![Корзина](./screencapture-localhost-5173-CartPage-2025-02-27-22_22_02.png)
+![Корзина](./public/screenshots/screencapture-localhost-5173-CartPage-2025-02-27-22_22_02.png)
